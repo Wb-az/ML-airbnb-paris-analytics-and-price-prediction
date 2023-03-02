@@ -12,9 +12,9 @@ Linear Models
 * Lasso
 * Ridge
 
---
+---
 Support Vector Machines
---
+---
 * SVR 
 
 ---
@@ -59,6 +59,8 @@ GIS  libraries
 ![figures](/figures/paris_listings.jpg)
 
 ! [Alt text] https://drive.google.com/file/d/1-4QCYnZS1etrT6kdO84eDe9Z_JjqhC2Y/view?usp=sharing
+
+![figures](/figures/geomap.html)
 
 
 

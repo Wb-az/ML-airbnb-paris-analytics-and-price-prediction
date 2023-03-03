@@ -21,7 +21,7 @@ With this in mind, the objectives of these project were:
 Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-data/
 
 
-## 2. Libraries utilized
+## 2. Libraries  and frameworks used
 
 * pandas
 * numpy
@@ -29,7 +29,6 @@ Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-d
 * sklearn
 * xgboost
 * lightgbm
-* torch
 * skorch
 * missigno
 * joblib
@@ -40,13 +39,17 @@ GIS  libraries
 * contextily
 * folium
 
+Frameworks
+
+* PyTorch
+
 
 ## 2. Geographical listing distribution
 
 - Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io/ace-aitech.github.io-airbnb_paris/
 
 
-<figure>
+
   <img src="/figures/neighbourhood.jpg"  />
   <figcaption>
       <h4>Listings density per neighbourhood</h4>
@@ -54,78 +57,35 @@ GIS  libraries
 </figure>
 
 
-## 2. Properties and rooms type
-
-<figure>
-  <img src="/figures/quarters_density.jpg"  />
-  <figcaption>
-      Price  quarter (2022)
-  </figcaption>
-</figure>
+## 3. Properties, rooms type quaters density and price frequency
 
 
-<figure>
-  <img src="/figures/property_type.jpg"  />
-  <figcaption>
-      <h4>Property type advertised during the Q2-Q4 </h4>
-  </figcaption>
-</figure>
+There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
+
+<img src="min_nights_dens.png" />
+
+**Note** The listings were recategorise in short and long-term if the minimum_nights was >=30
 
 
-
-<figure>
-  <img src="/figures/room_type.jpg"  />
-  <figcaption>
-      <h4>Room type advertised during the Q2-Q4 </h4>
-  </figcaption>
-</figure>
+<img src="/figures/quarters_density.jpg"  width="250" height="250"/> <img src="/figures/room_type.jpg" width="250" height="250" /><img src="/figures/property_type.jpg"  /> <img src="/figures/price_freq_01_99.jpg" />
 
 
-<figure>
-  <img src="/figures/quarters_density.jpg"  />
-  <figcaption>
-      Price  quarter (2022)
-  </figcaption>
-</figure>
+## 3.Price visualisation
+
+<img src="/figures/property_scrape_box.jpg" width="800" height="400" />
+
+<img src="/figures/property_room_type_box.jpg"  />
+
+<img src="/figures/neighbourhood_minimum_nights_box.jpg"  />
+
+<img src="/figures/neighbourhood_scrape_id_box.jpg"  />
 
 
 
-<figure>
-  <img src="/figures/price.jpg"  />
-  <figcaption>
-      <h4>Price frequency Q2-Q4 </h4>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="/figures/property_scrape_box.jpg"  />
-  <figcaption>
-      <h4>Price per type of property and Q2-Q4 </h4>
-  </figcaption>
-</figure>
+There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
 
 
-<figure>
-  <img src="/figures/property_room_type_box.jpg"  />
-  <figcaption>
-      <h4>Price per type of property and room </h4>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="/figures/neighbourhood_minimum_nights_box.jpg"  />
-  <figcaption>
-      <h4>Price per neighbourhood and min nights</h4>
-  </figcaption>
-</figure>
-
-<figure>
-  <img src="/figures/neighbourhood_scrape_id_box.jpg"  />
-  <figcaption>
-      <h4>Price per neighbourhood and quarter</h4>
-  </figcaption>
-</figure>
-
+## 3. Top ten amenities
 
 #### **Top 10 amenities**
 
@@ -142,7 +102,10 @@ GIS  libraries
 |dishes and silverware|71057|
 |washer|70354|
 
-## Feature selection with SelectPercentile with mutual_info_regression
+
+## 4. Features selection
+
+The datste after wrangling and cleaning contained 215 features. SelectPercentile with mutual_info_regression was used to slectonly the 50 percitile. The table below only show the top 10 features.
 
 
 |Feture | score |
@@ -158,15 +121,45 @@ GIS  libraries
 |beds                         |0.142563 |
 |review_scores_rating         |0.136706 |
 
+Note: thistable only shows the 
 
 
----
+## 4. Algorithms to process the date
+
+**Linear Models**
+
+* LinearRegression
+* Lasso
+* Ridge
+
+**Support Vector Machines**
+
+* SVR 
+
+**Trees**
+
+* DecisionTreeRegressor
+
+**Emssembles**
+
+* RandomForestRegressor
+* GradientBoostingRegressor
+* HistGradientBoostingRegressor
+* XGBRegressor
+* LGBMRegressor
+
+**ANN**
+
+* Three-hidden layers Neural Network
+
+### 4.1 Performance metrics
+* r<sup>2</sup>
+* mae
+* mse
+* rmse
 
 
-**Models' metrics**
-
-
----
+## 5. Results
 
 
 |model|linear\_regression|lasso|ridge|svr|decision\_tree|random\_forrest|gradient\_boosting|hist\_gradient\_boosting|xgb|LGBM|ann\_regressor|
@@ -184,15 +177,11 @@ GIS  libraries
 |test\_rmse|72\.4774|77\.1947|72\.4773|68\.4636|69\.4329|65\.9309|50\.5283|60\.4661|47\.5028|54\.2874|49\.5883|
 
 
----
 
-> **Ranked Models**
-
----
+## 5.1 Ranked Models
 
 
-
-|model|mean_pred\_val|mean_pred\_test|rank_train\_r2|rank_val\_r2|rank_test\_r2|rank_val\_mae|rank_test\_mae|rank_val\_mse|rank_test\_mse|rank_val\_rmse|rank_test\_rmse|
+|odel|mean_pred\_val|mean_pred\_test|rank_train\_r2|rank_val\_r2|rank_test\_r2|rank_val\_mae|rank_test\_mae|rank_val\_mse|rank_test\_mse|rank_val\_rmse|rank_test\_rmse|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |linear\_regression|155\.944|155\.7705|9\.5|9\.5|9\.5|9\.5|9\.5|10\.0|10\.0|10\.0|10\.0|
 |lasso|156\.1785|155\.7204|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|
@@ -207,9 +196,8 @@ GIS  libraries
 |ann\_regressor|145\.6884|145\.4348|__2\.0__|__2\.0__|__2\.0__|__1\.0__|__1\.0__|__2\.0__|__2\.0__|__2\.0__|__2\.0__|
 
 
----
 
-> **Hyper parameter tuning for the best model - XGBoost
+## 5.2 Hyper-parameters tuning for the best model - XGBoost
 
 ---
 Best Hyperparameters: 
@@ -218,37 +206,5 @@ Best Hyperparameters:
 * max_depth: 10 
 * n_estimators: 500
 
-
-
----
-Linear Models
----
-* LinearRegression
-* Lasso
-* Ridge
-
----
-Support Vector Machines
----
-* SVR 
-
----
-Trees
----
-* DecisionTreeRegressor
-
----
-Emssemble
----
-* RandomForestRegressor
-* GradientBoostingRegressor
-* HistGradientBoostingRegressor
-* XGBRegressor
-* LGBMRegressor
-
----
-MLP
-----
-*Three-hidden layers NeuralNetRegressor
 
 

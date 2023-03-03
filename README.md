@@ -58,7 +58,7 @@ GIS  libraries
 
 ![figures](/figures/paris_listings.jpg)
 
-! [Alt text] https://github.com/ace-aitech/ML-Airbnb-Paris_Analytics_and_Predictions/blob/main/figures/geomap.html
+
 
 ![figures](/figures/geomap.html)
 

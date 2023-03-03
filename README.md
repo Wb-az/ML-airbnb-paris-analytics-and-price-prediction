@@ -56,11 +56,9 @@ GIS  libraries
 * folium
 
 
-![figures](/figures/paris_listings.jpg)
+- Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io/ace-aitech.github.io-airbnb_paris/
 
 
-
-![figures](/figures/geomap.html)
 
 neighbourhood_listings
 

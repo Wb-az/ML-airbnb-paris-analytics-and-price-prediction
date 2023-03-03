@@ -59,10 +59,13 @@ Frameworks
 
 ## 3. Properties, rooms type quaters density and price frequency
 
+* 75 % of the listing has minimum_nights up to 4. 
+* There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
+* The most common property_type  is **rental unit**
+* Most common type of room **Entire home/apt**
 
-There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
 
-<img src="min_nights_dens.png" />
+<img src="figures/min_nights_dens.png" />
 
 **Note** The listings were recategorise in short and long-term if the minimum_nights was >=30
 
@@ -71,6 +74,15 @@ There are 7232 listings in airbnb Paris that required a minimun_nights stay of 3
 
 
 ## 3.Price visualisation
+
+* Most expensive room type is **Hotel room**
+* The cheapest accommodation is  **Shared room**
+* Most expensive properties are floor and Villa 
+* Cheapest neighbourhoods Ménilmontant $101.787, Buttes-Chaumont $116.75
+* Most expensive neighbourhoods are Élysée $260.112, Louvre $257.11
+* Cheapest neighbourhoods Ménilmontant $101.787, Buttes-Chaumont $116.75
+
+
 
 <img src="/figures/property_scrape_box.jpg" width="800" height="400" />
 

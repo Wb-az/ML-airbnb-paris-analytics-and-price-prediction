@@ -1,42 +1,27 @@
-# Airbnb analytics, visualisations and price predition
+# Airbnb analytics, visualisations and price prediction
 ## airbnb Paris quarter Q3 - Q4 2022 scrapes (March-Dec 2022)
 
 
-Geographical information
+## 1. Introduction
 
 
----
-Linear Models
----
-* LinearRegression
-* Lasso
-* Ridge
+Airbnb, Inc. is an American San Francisco-based company operating an online marketplace for short-term homestays and experiences. The company acts as a broker and charges a commission from each booking. The company not only have revolutionized the tourism industry but has also been facilitated an unaffordable increase in home rents, and for a lack of regulation (https://en.wikipedia.org/wiki/Airbnb).
 
----
-Support Vector Machines
----
-* SVR 
+With this in mind, the objectives of these project were:
 
----
-Trees
----
-* DecisionTreeRegressor
+- Visualise the properties offered in the 20 Arrondissements of Paris during Quarters Q2 - Q4 of 2022
+- Find features that impact the price of a listing
+- Identify potential inactive listing with outlier prices - noise
+- Identify the most expensive and cheapest neighbourhoods
+- Identyfied the type of accommodations and properties more often offered by airbnb
+- Identify listing that offered for long-term stays
+- Processing the data to predict the listing price per night with Machine Learning algorithms 
+- Optimize the best model hyperparameters
 
----
-Emssemble
----
-* RandomForestRegressor
-* GradientBoostingRegressor
-* HistGradientBoostingRegressor
-* XGBRegressor
-* LGBMRegressor
+Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-data/
 
----
-MLP
-----
-*Three-hidden layers NeuralNetRegressor
 
-## Libraries utilized
+## 2. Libraries utilized
 
 * pandas
 * numpy
@@ -56,11 +41,10 @@ GIS  libraries
 * folium
 
 
+## 2. Geographical listing distribution
+
 - Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io/ace-aitech.github.io-airbnb_paris/
 
-
-
-neighbourhood_listings
 
 <figure>
   <img src="/figures/neighbourhood.jpg"  />
@@ -70,11 +54,12 @@ neighbourhood_listings
 </figure>
 
 
+## 2. Properties and rooms type
 
 <figure>
   <img src="/figures/quarters_density.jpg"  />
   <figcaption>
-      <h4> Listing advertised per year quarter (2022)</h4>
+      Price  quarter (2022)
   </figcaption>
 </figure>
 
@@ -94,6 +79,15 @@ neighbourhood_listings
       <h4>Room type advertised during the Q2-Q4 </h4>
   </figcaption>
 </figure>
+
+
+<figure>
+  <img src="/figures/quarters_density.jpg"  />
+  <figcaption>
+      Price  quarter (2022)
+  </figcaption>
+</figure>
+
 
 
 <figure>
@@ -223,5 +217,38 @@ Best Hyperparameters:
 * learning_rate: 0.05
 * max_depth: 10 
 * n_estimators: 500
+
+
+
+---
+Linear Models
+---
+* LinearRegression
+* Lasso
+* Ridge
+
+---
+Support Vector Machines
+---
+* SVR 
+
+---
+Trees
+---
+* DecisionTreeRegressor
+
+---
+Emssemble
+---
+* RandomForestRegressor
+* GradientBoostingRegressor
+* HistGradientBoostingRegressor
+* XGBRegressor
+* LGBMRegressor
+
+---
+MLP
+----
+*Three-hidden layers NeuralNetRegressor
 
 

@@ -33,7 +33,7 @@ Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-d
 * skorch
 * missigno
 * joblib
-* SHAP
+* shap
 
 GIS  libraries
 

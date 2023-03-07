@@ -17,6 +17,7 @@ With this in mind, the objectives of these project were:
 - Identify listing that offered for long-term stays
 - Processing the data to predict the listing price per night with Machine Learning algorithms 
 - Optimize the best model hyperparameters
+- Best model explainability - XAI Shapley number computation
 
 Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-data/
 
@@ -32,6 +33,7 @@ Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-d
 * skorch
 * missigno
 * joblib
+* SHAP
 
 GIS  libraries
 
@@ -242,20 +244,21 @@ Best Hyperparameters:
 - **bedrooms**
 
 <p align="center">
-  <img width="811" src="figures/xai_01.png
-</p>
-Features contribution towards the prices
-
-<p align="center"><img width="811" src="figures/xai_02g" /></p><p align="center"><img width="811" src="figures/xai_03ng" /></p>
-Feature mean absolute contribution towards the prices
-
+  <img width="600" src="figures/xai_01.png" /></p>
 <p align="center">
-  <img width="811" src="figures/xai_04.png" />
-</p>
-Features absolute contribution towards the prices sorted by the maximum absolute value. -
+      Features contribution towards the prices - SHAP value</p>
 
-<p align="center"><img width="811" src="figures/xai_05.png  </p>
-Waterfall example of listing instance
+<p align="center"><img width="600" src="figures/xai_03.png" /></p>
+<p align="center">
+     Features absolute contribution towards the prices sorted by the maximum absolute value SHAP value</p>
+
+
+<p align="center"><img width="600" src="figures/xai_05.png" /></p>
+<p align="center"> Waterfall example of features contribution to a listing price</p>
+
+
+<p align="center"><img width="600" src="figures/xai_06.png" /></p>
+<p align="center"> Features clustering mean SHAP value </p>
 
 
 

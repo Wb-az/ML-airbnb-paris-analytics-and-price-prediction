@@ -219,8 +219,11 @@ Best Hyperparameters:
 * learning_rate: 0.05
 * max_depth: 10 
 * n_estimators: 700
+
+---
+Metrics
 * RMSE: 46.73
-* r<sup>2</sup>:0.96
+* r<sup>2</sup>: 0.96
 * mean price: 155.65
 
 

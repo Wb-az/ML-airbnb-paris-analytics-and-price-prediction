@@ -195,7 +195,7 @@ Note: thistable only shows the
 ## 5.1 Ranked Models
 
 
-|odel|mean_pred\_val|mean_pred\_test|rank_train\_r2|rank_val\_r2|rank_test\_r2|rank_val\_mae|rank_test\_mae|rank_val\_mse|rank_test\_mse|rank_val\_rmse|rank_test\_rmse|
+|model|mean_pred\_val|mean_pred\_test|rank_train\_r2|rank_val\_r2|rank_test\_r2|rank_val\_mae|rank_test\_mae|rank_val\_mse|rank_test\_mse|rank_val\_rmse|rank_test\_rmse|
 |---|---|---|---|---|---|---|---|---|---|---|---|
 |linear\_regression|155\.944|155\.7705|9\.5|9\.5|9\.5|9\.5|9\.5|10\.0|10\.0|10\.0|10\.0|
 |lasso|156\.1785|155\.7204|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|

@@ -1,5 +1,5 @@
 # Airbnb analytics, visualisations and price prediction
-## airbnb Paris quarter Q3 - Q4 2022 scrapes (March-Dec 2022)
+## Airbnb Paris quarters Q3 - Q4 2022 scrapes (March-Dec 2022)
 
 
 ## 1. Introduction

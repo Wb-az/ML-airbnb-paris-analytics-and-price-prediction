@@ -216,7 +216,46 @@ Best Hyperparameters:
 
 * learning_rate: 0.05
 * max_depth: 10 
-* n_estimators: 500
+* n_estimators: 700
+* RMSE: 46.73
+* r<sup>2</sup>:0.96
+* mean price: 155.65
+
+
+# 6. Explainability - XAI Shapley values computation
+
+### Largest contributors to the price (mean values contribution):
+-  **longitude** is the feature mean highest contribution to the price
+- **private bathroom**
+- **accommodates**
+- **latitude**
+- **bedrooms**
+
+---
+
+### Largest contributors to the price absolute value:
+
+- **accommodates**
+- **private bathroom**
+- **longitude** 
+- **latitude**
+- **bedrooms**
+
+<p align="center">
+  <img width="811" src="figures/xai_01.png
+</p>
+Features contribution towards the prices
+
+<p align="center"><img width="811" src="figures/xai_02g" /></p><p align="center"><img width="811" src="figures/xai_03ng" /></p>
+Feature mean absolute contribution towards the prices
+
+<p align="center">
+  <img width="811" src="figures/xai_04.png" />
+</p>
+Features absolute contribution towards the prices sorted by the maximum absolute value. -
+
+<p align="center"><img width="811" src="figures/xai_05.png  </p>
+Waterfall example of listing instance
 
 
 

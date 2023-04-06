@@ -82,7 +82,6 @@ Frameworks
 * Most expensive properties are floor and Villa 
 * Cheapest neighbourhoods Ménilmontant $101.787, Buttes-Chaumont $116.75
 * Most expensive neighbourhoods are Élysée $260.112, Louvre $257.11
-* Cheapest neighbourhoods Ménilmontant $101.787, Buttes-Chaumont $116.75
 
 
 

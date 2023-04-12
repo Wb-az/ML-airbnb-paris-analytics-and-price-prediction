@@ -48,7 +48,7 @@ Frameworks
 
 ## 2. Geographical listing distribution
 
-- Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io/ace-aitech.github.io-airbnb_paris/
+- Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io
 
 
 

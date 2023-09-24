@@ -1,4 +1,4 @@
-# Airbnb analytics, visualisations and price prediction
+# Airbnb visualisations, analytics and price prediction
 ## Airbnb Paris quarters Q3 - Q4 2022 scrapes (March-Dec 2022)
 
 
@@ -123,18 +123,18 @@ The datste after wrangling and cleaning contained 215 features. SelectPercentile
 
 |Feture | score |
 |-----------------------------|---------|
-|longitude                    |0.433548 |
-|latitude                     |0.431849 |
-|accommodates                 |0.216456 |
-|private_bathroom             |0.158003 |
-|reviews_per_month            |0.156377 |
-|bedrooms                     |0.148302 |
-|review_scores_cleanliness    |0.146213 |
-|review_scores_value          |0.143887 |
-|beds                         |0.142563 |
-|review_scores_rating         |0.136706 |
+|latitude                     |0.428293 |
+|longitude                    |0.421370 |
+|accommodates                 |0.221911 |
+|bedrooms                     |0.152950|
+|private_bathroom             |0.151730 |
+|beds                         |0.148020 |
+|review_scores_cleanliness    |0.145512 |
+|reviews_per_month            |0.143595 |
+|review_scores_value          |0.133681 |
+|review_scores_rating         |0.125553 |
 
-Note: thistable only shows the 
+Note: this table only shows the top ten features
 
 
 ## 4. Algorithms to process the date
@@ -142,12 +142,12 @@ Note: thistable only shows the
 **Linear Models**
 
 * LinearRegression
-* Lasso
 * Ridge
+* Bayesian Ridge Regression
 
 **Support Vector Machines**
 
-* SVR 
+* SVR - Performed well with sparse data (hot-encoded)
 
 **Trees**
 
@@ -168,6 +168,7 @@ Note: thistable only shows the
 ### 4.1 Performance metrics
 * r<sup>2</sup>
 * mae
+* mape
 * mse
 * rmse
 
@@ -194,19 +195,19 @@ Note: thistable only shows the
 ## 5.1 Ranked Models
 
 
-|model|mean_pred\_val|mean_pred\_test|rank_train\_r2|rank_val\_r2|rank_test\_r2|rank_val\_mae|rank_test\_mae|rank_val\_mse|rank_test\_mse|rank_val\_rmse|rank_test\_rmse|
-|---|---|---|---|---|---|---|---|---|---|---|---|
-|linear\_regression|155\.944|155\.7705|9\.5|9\.5|9\.5|9\.5|9\.5|10\.0|10\.0|10\.0|10\.0|
-|lasso|156\.1785|155\.7204|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|11\.0|
-|ridge|155\.9431|155\.7696|9\.5|9\.5|9\.5|9\.5|9\.5|9\.0|9\.0|9\.0|9\.0|
-|svr|142\.8075|142\.5344|8\.0|7\.0|7\.0|5\.0|5\.0|7\.0|7\.0|7\.0|7\.0|
-|decision\_tree|155\.889|155\.4132|7\.0|8\.0|8\.0|8\.0|8\.0|8\.0|8\.0|8\.0|8\.0|
-|random\_forrest|155\.8143|155\.9366|6\.0|6\.0|6\.0|7\.0|7\.0|6\.0|6\.0|6\.0|6\.0|
-|gradient\_boosting|155\.5398|155\.724|__3\.0__|__3\.0__|__3\.0__|__3\.0__|__3\.0__|__3\.0__|__3\.0__|__3\.0__|__3\.0__|
-|hist\_gradient\_boosting|155\.985|156\.0552|5\.0|5\.0|5\.0|6\.0|6\.0|5\.0|5\.0|5\.0|5\.0|
-|xgb|155\.6422|155\.6028|__1\.0__|__1\.0__|__1\.0__|__2\.0__|__2\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|
-|LGBM|155\.786|155\.7839|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|
-|ann\_regressor|145\.6884|145\.4348|__2\.0__|__2\.0__|__2\.0__|__1\.0__|__1\.0__|__2\.0__|__2\.0__|__2\.0__|__2\.0__|
+|Model|mean\_yhat\_val|mean\_yhat\_test|train\_r2|val\_r2|test\_r2|val\_mae|test\_mae|val\_mape|test\_mape|val\_mse|test\_mse|val\_rmse|test\_rmse|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|linear\_regression|155\.4831|156\.4836|10\.0|10\.0|10\.5|11\.0|11\.0|9\.5|9\.5|9\.0|11\.0|9\.0|11\.0|
+|ridge|155\.4825|156\.483|10\.0|10\.0|10\.5|10\.0|10\.0|9\.5|9\.5|10\.0|10\.0|10\.0|10\.0|
+|bayesian\_ridge|155\.4768|156\.4773|10\.0|10\.0|9\.0|9\.0|9\.0|8\.0|8\.0|11\.0|9\.0|11\.0|9\.0|
+|svr|168\.6909|169\.1026|5\.0|6\.0|6\.0|8\.0|8\.0|11\.0|11\.0|6\.0|6\.0|6\.0|6\.0|
+|decision\_tree|154\.8135|156\.4564|8\.0|8\.0|8\.0|7\.0|7\.0|7\.0|7\.0|8\.0|8\.0|8\.0|8\.0|
+|random\_forest|155\.1075|156\.3841|7\.0|7\.0|7\.0|6\.0|6\.0|6\.0|6\.0|7\.0|7\.0|7\.0|7\.0|
+|gradient\_boosting|155\.1426|156\.318|3\.0|2\.0|3\.0|3\.0|3\.0|3\.0|3\.0|2\.0|3\.0|2\.0|3\.0|
+|hist\_gradient\_boosting|155\.2242|156\.4411|6\.0|5\.0|5\.0|5\.0|5\.0|5\.0|5\.0|5\.0|5\.0|5\.0|5\.0|
+|xgb|155\.4133|156\.6328|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|__1\.0__|
+|LGBM|155\.0745|156\.3721|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|4\.0|
+|ann\_regressor|153\.1353|154\.2809|2\.0|3\.0|2\.0|2\.0|2\.0|2\.0|2\.0|3\.0|2\.0|3\.0|2\.0|
 
 
 

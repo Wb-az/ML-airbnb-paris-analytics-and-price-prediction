@@ -5,16 +5,16 @@
 ## 1. Introduction
 
 
-Airbnb, Inc. is an American San Francisco-based company operating an online marketplace for short-term homestays and experiences. The company acts as a broker and charges a commission from each booking. The company not only have revolutionized the tourism industry but has also been facilitated an unaffordable increase in home rents, and for a lack of regulation (https://en.wikipedia.org/wiki/Airbnb).
+Airbnb, Inc. is an American San Francisco-based company operating an online marketplace for short-term homestays and experiences. The company acts as a broker and charges a commission from each booking. The company not only have revolutionized the tourism industry but has also facilitated an unaffordable increase in home rents and a lack of regulation (https://en.wikipedia.org/wiki/Airbnb).
 
-With this in mind, the objectives of these project were:
+With this in mind, the objectives of this project were:
 
 - Visualise the properties offered in the 20 Arrondissements of Paris during Quarters Q2 - Q4 of 2022
 - Find features that impact the price of a listing
 - Identify potential inactive listing with outlier prices - noise
 - Identify the most expensive and cheapest neighbourhoods
-- Identyfied the type of accommodations and properties more often offered by airbnb
-- Identify listing that offered for long-term stays
+- Identyfy the type of accommodations and properties more often offered by Airbnb
+- Identify listings that offered for long-term stays
 - Processing the data to predict the listing price per night with Machine Learning algorithms 
 - Optimize the best model hyperparameters
 - Best model explainability - XAI Shapley number computation
@@ -48,7 +48,7 @@ Frameworks
 
 ## 2. Geographical listing distribution
 
-- Interactive map available for airbnb_paris.ipynb https://ace-aitech.github.io
+- Interactive map available for ``` airbnb_paris.ipynb ``` https://ace-aitech.github.io
 
 
 
@@ -69,7 +69,7 @@ Frameworks
 
 <img src="figures/min_nights_dens.png" />
 
-**Note** The listings were recategorise in short and long-term if the minimum_nights was >=30
+**Note** The listings were recategorised in short and long-term if the minimum_nights was >=30
 
 
 <img src="/figures/quarters_density.jpg"  width="250" height="250"/> <img src="/figures/room_type.jpg" width="250" height="250" /><img src="/figures/property_type.jpg"  /> <img src="/figures/price_freq_01_99.jpg" />
@@ -77,11 +77,11 @@ Frameworks
 
 ## 3.Price visualisation
 
-* Most expensive room type is **Hotel room**
+* The most expensive room type is **Hotel room**
 * The cheapest accommodation is  **Shared room**
 * Most expensive properties are floor and Villa 
 * Cheapest neighbourhoods Ménilmontant $101.787, Buttes-Chaumont $116.75
-* Most expensive neighbourhoods are Élysée $260.112, Louvre $257.11
+* The most expensive neighbourhoods are Élysée $260.112, Louvre $257.11
 
 
 
@@ -118,21 +118,21 @@ There are 7232 listings in airbnb Paris that required a minimun_nights stay of 3
 
 ## 4. Features selection
 
-The datste after wrangling and cleaning contained 215 features. SelectPercentile with mutual_info_regression was used to slectonly the 50 percitile. The table below only show the top 10 features.
+The dataset after wrangling, cleaning and encoding contained 215 features. SelectPercentile with mutual_info_regression was used to select only the 50 percentile. The table below only shows the top 10 features.
 
 
-|Feture | score |
+|Feature | score |
 |-----------------------------|---------|
-|latitude                     |0.428293 |
-|longitude                    |0.421370 |
-|accommodates                 |0.221911 |
-|bedrooms                     |0.152950|
-|private_bathroom             |0.151730 |
-|beds                         |0.148020 |
-|review_scores_cleanliness    |0.145512 |
-|reviews_per_month            |0.143595 |
-|review_scores_value          |0.133681 |
-|review_scores_rating         |0.125553 |
+|latitude                     |0.432559|
+|longitude                    |0.432547 |
+|accommodates                 |0.218494 |
+|reviews_per_month            |0.158682|
+|private_bathroom             |0.157154 |
+|bedrooms                     |0.147699 |
+|review_scores_value          |0.145960 |
+|beds                         |0.144976 |
+|review_scores_cleanliness    |0.143778 |
+|review_scores_rating         |0.134326 |
 
 Note: this table only shows the top ten features
 
@@ -163,7 +163,7 @@ Note: this table only shows the top ten features
 
 **ANN**
 
-* Three-hidden layers Neural Network
+* Three hidden layers Neural Network
 
 ### 4.1 Performance metrics
 * r<sup>2</sup>

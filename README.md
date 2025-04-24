@@ -21,7 +21,6 @@ With this in mind, the objectives of this project were:
 
 Airbnb datasets Q2-Q4 2022 can be sourced from http://insideairbnb.com/get-the-data/
 
-
 ## 2. Libraries  and frameworks used
 
 * pandas
@@ -46,20 +45,26 @@ Frameworks
 * PyTorch
 
 
-## 2. Geographical listing distribution
+## 3. Geographical listing distribution
 
-- Interactive map available for ``` airbnb_paris.ipynb ``` https://ace-aitech.github.io
+**Interactive map** [Paris Airbnb Map](https://ace-aitech.github.io)
 
-
-
-  <img src="/figures/neighbourhood.jpg"  />
   <figcaption>
-      <h4>Listings density per neighbourhood</h4>
+      <img src="/figures/interactive_map.png"/>
+      Airbnb listings in Paris Arrondissements
   </figcaption>
 </figure>
 
 
-## 3. Properties, rooms type quaters density and price frequency
+
+  <figcaption>
+     <img src="/figures/neighbourhood.jpg"/>
+      Listings density per neighbourhood
+  </figcaption>
+</figure>
+
+
+## 4. Properties, rooms type quaters density and price frequency
 
 * 75 % of the listing has minimum_nights up to 4. 
 * There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
@@ -72,10 +77,12 @@ Frameworks
 **Note** The listings were recategorised in short and long-term if the minimum_nights was >=30
 
 
-<img src="/figures/quarters_density.jpg"  width="250" height="250"/> <img src="/figures/room_type.jpg" width="250" height="250" /><img src="/figures/property_type.jpg"  /> <img src="/figures/price_freq_01_99.jpg" />
+<img src="/figures/quarters_density.jpg"  width="250" height="250"/> <img src="/figures/room_type.jpg" width="250" height="250" /><img src="/figures/property_type.jpg"/> 
+
+<img src="/figures/price_freq_01_99.jpg" width="320" height="220"/> <img src="/figures/short_long_term_lease.png"  width="300" height="250"/> 
 
 
-## 3.Price visualisation
+## 5.Price visualisation
 
 * The most expensive room type is **Hotel room**
 * The cheapest accommodation is  **Shared room**
@@ -98,7 +105,7 @@ Frameworks
 There are 7232 listings in airbnb Paris that required a minimun_nights stay of 30 nights covering the 8.74% unique listings from Q2-Q4 2022.
 
 
-## 3. Top ten amenities
+## 6. Top ten amenities
 
 #### **Top 10 amenities**
 
@@ -116,7 +123,7 @@ There are 7232 listings in airbnb Paris that required a minimun_nights stay of 3
 |washer|70354|
 
 
-## 4. Features selection
+## 7. Features selection
 
 The dataset after wrangling, cleaning and encoding contained 215 features. SelectPercentile with mutual_info_regression was used to select only the 50 percentile. The table below only shows the top 10 features.
 
@@ -137,7 +144,7 @@ The dataset after wrangling, cleaning and encoding contained 215 features. Selec
 Note: this table only shows the top ten features
 
 
-## 4. Algorithms to process the date
+## 8. Algorithms to process the date
 
 **Linear Models**
 
@@ -165,7 +172,7 @@ Note: this table only shows the top ten features
 
 * Three hidden layers Neural Network
 
-### 4.1 Performance metrics
+### 8.1 Performance metrics
 * r<sup>2</sup>
 * mae
 * mape
@@ -173,7 +180,7 @@ Note: this table only shows the top ten features
 * rmse
 
 
-## 5. Results
+## 9. Results
 
 
 |model|linear\_regression|lasso|ridge|svr|decision\_tree|random\_forrest|gradient\_boosting|hist\_gradient\_boosting|xgb|LGBM|ann\_regressor|
@@ -192,7 +199,7 @@ Note: this table only shows the top ten features
 
 
 
-## 5.1 Ranked Models
+## 9.1 Ranked Models
 
 
 |Model|mean\_yhat\_val|mean\_yhat\_test|train\_r2|val\_r2|test\_r2|val\_mae|test\_mae|val\_mape|test\_mape|val\_mse|test\_mse|val\_rmse|test\_rmse|
@@ -211,7 +218,7 @@ Note: this table only shows the top ten features
 
 
 
-## 5.2 Hyper-parameters tuning for the best model - XGBoost
+## 9.2 Hyper-parameters tuning for the best model - XGBoost
 
 ---
 Best Hyperparameters: 
@@ -227,7 +234,7 @@ Metrics
 * mean price: 155.65
 
 
-# 6. Explainability - XAI Shapley values computation
+# 10. Explainability - XAI Shapley values computation
 
 ### Largest contributors to the price (mean values contribution):
 -  **longitude** is the feature mean highest contribution to the price
